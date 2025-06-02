@@ -1,0 +1,30 @@
+{
+  "employment": {
+    "description": "Resources to help veterans find jobs and training opportunities.",
+    "links": [
+      "https://www.dol.gov/agencies/vets/veterans/job-search",
+      "https://www.va.gov/careers-employment/"
+    ]
+  },
+  "education": {
+    "description": "Information about GI Bill and other education benefits.",
+    "links": [
+      "https://www.va.gov/education/",
+      "https://benefits.va.gov/gibill/"
+    ]
+  },
+  "healthcare": {
+    "description": "Access to mental and physical health services for veterans.",
+    "links": [
+      "https://www.va.gov/health/",
+      "https://www.mentalhealth.va.gov/"
+    ]
+  },
+  "housing": {
+    "description": "Housing assistance and homeless veteran resources.",
+    "links": [
+      "https://www.va.gov/homeless/",
+      "https://www.va.gov/housing-assistance/"
+    ]
+  }
+}
