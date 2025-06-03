@@ -18,12 +18,12 @@ A backend API (Node.js/Express or Python/FastAPI) with a PostgreSQL database is 
 
 ## Development
 
-Run the UI locally:
+Run the UI locally with [pnpm](https://pnpm.io):
 
 ```bash
 cd compass4vets-ui
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open <http://localhost:3000> in your browser.
