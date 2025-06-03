@@ -31,6 +31,7 @@ export default function RootLayout({
             Compass4Vets
           </Link>
           <nav className="flex gap-4">
+            <Link href="/login">Login</Link>
             <Link href="/register">Register</Link>
             <Link href="/profile">Profile</Link>
             <Link href="/explore">Explore</Link>
