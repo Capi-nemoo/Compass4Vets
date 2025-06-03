@@ -1,8 +1,7 @@
-import Image from "next/image";
-// src/app/page.tsx
-import Compass4VetsApp from "./Compass4VetsApp";
+"use client";
+import LandingPage from "@/components/LandingPage";
 
 export default function Page() {
-  return <Compass4VetsApp />;
+  return <LandingPage />;
 }
 
