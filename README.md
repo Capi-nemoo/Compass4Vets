@@ -19,7 +19,7 @@ A backend API (Node.js/Express or Python/FastAPI) with a PostgreSQL database is 
 ## Development
 
 
-'''bash
+``` bash
 ┌─────────────────────────────────────────────┐
 │                 Frontend (Web)              │
 │  • Next.js/React UI                          │
@@ -55,7 +55,7 @@ A backend API (Node.js/Express or Python/FastAPI) with a PostgreSQL database is 
 │  • Deploy to Vercel/AWS/GCP                  │
 └─────────────────────────────────────────────┘
 
-'''
+```
 
 
 Run the UI locally:
