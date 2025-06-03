@@ -3,7 +3,7 @@
 Compass4Vets is a prototype command-line tool that helps U.S. veterans locate
 social-service resources when transitioning to civilian life. The project is
 aimed at demonstrating how a Llama-powered system could surface relevant
-resources in areas such as employment, education, healthcare, and housing.
+df resources in areas such as employment, education, healthcare, and housing.
 
 ## Getting Started
 
