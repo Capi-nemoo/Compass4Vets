@@ -1,16 +1,12 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { FlatCompat } from '@eslint/eslintrc';
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+  // use this file's directory for extending configs
+  baseDirectory: dirname(fileURLToPath(import.meta.url)),
 });
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+export default [
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
 ];
-
-export default eslintConfig;
