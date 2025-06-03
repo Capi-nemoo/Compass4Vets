@@ -35,8 +35,6 @@ export default function RootLayout({
             <Link href="/profile">Profile</Link>
             <Link href="/explore">Explore</Link>
             <Link href="/community">Community</Link>
-=======
-
           </nav>
         </header>
         {children}

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-=======
+
 import { motion, useReducedMotion } from "framer-motion"
 
 /**
@@ -75,8 +75,8 @@ export default function LandingPage() {
     setTimeout(() => router.push("/explore"), 600)
   }
 
-  const [selected, setSelected] = useState<string | null>(null)
 
+  const [selected, setSelected] = useState<string | null>(null)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
