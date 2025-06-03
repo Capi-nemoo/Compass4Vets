@@ -18,6 +18,46 @@ A backend API (Node.js/Express or Python/FastAPI) with a PostgreSQL database is 
 
 ## Development
 
+
+'''bash
+┌─────────────────────────────────────────────┐
+│                 Frontend (Web)              │
+│  • Next.js/React UI                          │
+│  • Google Maps for interactive resource map  │
+│  • Chat/Forum components using WebSockets    │
+└─────────────────────────────────────────────┘
+               │  REST/GraphQL  │
+┌─────────────────────────────────────────────┐
+│              Backend API                    │
+│  • Node.js (Express) or Python (FastAPI)    │
+│  • Handles auth, chat, profile CRUD         │
+│  • Integrates with third‑party services     │
+└─────────────────────────────────────────────┘
+               │     DB ORM     │
+┌─────────────────────────────────────────────┐
+│               Database                       │
+│  • PostgreSQL (user profiles, posts, etc.)   │
+│  • Optionally Redis for session/chat cache   │
+└─────────────────────────────────────────────┘
+               │ External APIs │
+┌─────────────────────────────────────────────┐
+│          External Services                   │
+│  • Google Maps API                           │
+│  • Chat model (OpenAI/Llama)                 │
+│  • Email/SMS (e.g., SendGrid/Twilio)         │
+│  • Auth provider (NextAuth/Auth0)            │
+└─────────────────────────────────────────────┘
+               │  Build & Deploy │
+┌─────────────────────────────────────────────┐
+│             CI/CD Pipeline                   │
+│  • GitHub Actions or similar                 │
+│  • Lint/Test → Build → Deploy                │
+│  • Deploy to Vercel/AWS/GCP                  │
+└─────────────────────────────────────────────┘
+
+'''
+
+
 Run the UI locally:
 
 ```bash
