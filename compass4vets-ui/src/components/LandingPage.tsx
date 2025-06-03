@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { motion, useReducedMotion } from "framer-motion"
 
 /**
@@ -57,7 +58,21 @@ export function GhostButton({ text, onClick }: { text: string; onClick: () => vo
 
 export default function LandingPage() {
   const shouldReduce = useReducedMotion()
+  const router = useRouter()
   const [selected, setSelected] = useState<string | null>(null)
+
+  function handleGetStarted() {
+    setSelected("primary")
+    setTimeout(() => router.push("/login"), 600)
+  }
+
+  function handleGuest() {
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("guest", "true")
+    }
+    setSelected("ghost")
+    setTimeout(() => router.push("/explore"), 600)
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -101,8 +116,8 @@ export default function LandingPage() {
       </svg>
       <p className="mb-8 text-2xl font-semibold">Your compass for veteran resources.</p>
       <div className="flex gap-4">
-        <PrimaryButton text="Get Started" onClick={() => setSelected("primary")}></PrimaryButton>
-        <GhostButton text="Just Looking Around" onClick={() => setSelected("ghost")}></GhostButton>
+        <PrimaryButton text="Get Started" onClick={handleGetStarted}></PrimaryButton>
+        <GhostButton text="Just Looking Around" onClick={handleGuest}></GhostButton>
       </div>
     </motion.div>
   )
