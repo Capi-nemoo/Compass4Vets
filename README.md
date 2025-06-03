@@ -1,22 +1,31 @@
 # Compass4Vets
 
-Compass4Vets is a prototype command-line tool that helps U.S. veterans locate
-social-service resources when transitioning to civilian life. The project is
-aimed at demonstrating how a Llama-powered system could surface relevant
-df resources in areas such as employment, education, healthcare, and housing.
+Compass4Vets is an in-progress web platform that helps U.S. veterans discover benefits, locate resources, and connect with peers when transitioning to civilian life.
 
-## Getting Started
+## MVP Features
 
-1. Ensure you have Python 3.8+ installed.
-2. Clone this repository and install any dependencies (there are none for this
-   demo).
+- **Veteran registration and profile management**
+- **Interactive resource map** powered by Google Maps
+- **Benefits assistant chat** for quick answers to questions
+- **Peer-to-peer forum and chat** to build community
 
-Run the CLI with:
+## Project Structure
+
+- `compass4vets-ui/` – Next.js front end
+- `resources.json` – Sample data used during early prototyping
+
+A backend API (Node.js/Express or Python/FastAPI) with a PostgreSQL database is planned for future development.
+
+## Development
+
+Run the UI locally:
 
 ```bash
-python compass4vets.py --list          # Show available categories
-python compass4vets.py employment      # Display employment resources
+cd compass4vets-ui
+npm install
+npm run dev
 ```
 
-The resource data is stored in `resources.json`. In a full deployment, this
-information could be expanded and enhanced with Llama-generated guidance.
+Open <http://localhost:3000> in your browser.
+
+Contributions are welcome!
