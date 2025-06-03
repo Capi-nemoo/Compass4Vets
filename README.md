@@ -9,6 +9,9 @@ Compass4Vets is an in-progress web platform that helps U.S. veterans discover be
 - **Benefits assistant chat** for quick answers to questions
 - **Peer-to-peer forum and chat** to build community
 
+Veterans can create a basic profile via the Register page (`/register`).
+The saved information is shown on `/profile` and stored locally in the browser.
+
 ## Project Structure
 
 - `compass4vets-ui/` – Next.js front end
