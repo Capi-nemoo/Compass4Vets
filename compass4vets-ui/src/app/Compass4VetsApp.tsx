@@ -98,7 +98,7 @@ const MOCK_RESULTS: Result[] = [
 /* ──────────────────────────────────────────────────────────────── */
 /* Main component                                                   */
 /* ──────────────────────────────────────────────────────────────── */
-export default function Compass4VetsApp() {
+export default function Compass4VetsApp({ questionnaireData }: { questionnaireData: any | null }) {
   const [location, setLocation] = useState("");
   const [keyword, setKeyword] = useState("");
   const [activeCat, setActiveCat] = useState<CategoryId | null>(null);
@@ -119,6 +119,7 @@ export default function Compass4VetsApp() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
       {/* ─────────────── Hero ─────────────── */}
+      {/* ─────────────── Hero ─────────────── */}
       <section className="relative overflow-hidden py-12 sm:py-20 lg:py-24">
         <div className="mx-auto flex max-w-6xl flex-col items-center px-6 text-center">
           <motion.h1
@@ -136,40 +137,40 @@ export default function Compass4VetsApp() {
         </div>
       </section>
 
-      {/* ───────────── Search bar ───────────── */}
-      <section className="mx-auto max-w-4xl px-6">
-        <div className="grid gap-4 sm:grid-cols-12">
-          {/* Location */}
-          <div className="col-span-12 flex items-center gap-2 sm:col-span-5">
-            <MapPin className="h-5 w-5 text-gray-500" aria-hidden="true" />
-            <Input
-              placeholder="ZIP code or city/state"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              aria-label="Location"
-            />
+      {/* ───────── Search bar (now above category chips) ───────── */}
+      <section className="w-full bg-gray-50 py-5 mt-10"> {/* Changed background to bg-gray-50, removed backdrop-blur */}
+          <div className="mx-auto grid max-w-5xl grid-cols-12 items-center gap-x-4 gap-y-3 px-6">
+            {/* Location */}
+            <div className="col-span-12 flex items-center gap-2 sm:col-span-5">
+              <MapPin className="h-5 w-5 text-gray-500" aria-hidden="true" />
+              <Input
+                placeholder="ZIP code or city/state"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                aria-label="Location"
+              />
+            </div>
+            {/* Keyword */}
+            <div className="col-span-12 flex items-center gap-2 sm:col-span-5">
+              <Search className="h-5 w-5 text-gray-500" aria-hidden="true" />
+              <Input
+                placeholder="Keyword (e.g., résumé, PTSD, rental)"
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+                aria-label="Keyword"
+              />
+            </div>
+            {/* Button */}
+            <div className="col-span-12 flex justify-end sm:col-span-2">
+              <Button className="w-full sm:w-auto" onClick={handleSearch}>
+                Search
+              </Button>
+            </div>
           </div>
-          {/* Keyword */}
-          <div className="col-span-12 flex items-center gap-2 sm:col-span-5">
-            <Search className="h-5 w-5 text-gray-500" aria-hidden="true" />
-            <Input
-              placeholder="Keyword (e.g., résumé, PTSD, rental)"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-              aria-label="Keyword"
-            />
-          </div>
-          {/* Button */}
-          <div className="col-span-12 flex justify-end sm:col-span-2">
-            <Button className="w-full sm:w-auto" onClick={handleSearch}>
-              Search
-            </Button>
-          </div>
-        </div>
-      </section>
+        </section>
 
       {/* ───────── Category chips ───────── */}
-      <section className="mx-auto mt-10 max-w-5xl px-6">
+      <section className="mx-auto mt-6 max-w-5xl px-6"> {/* Adjusted mt-6 for spacing from new search bar position */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {CATEGORIES.map(({ id, label, icon: Icon, color }) => (
             <motion.button

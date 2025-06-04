@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import ClientLayoutWrapper from "./ClientLayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,21 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header className="flex items-center justify-between bg-gray-100 p-4">
-          <Link href="/" className="font-semibold">
-            Compass4Vets
-          </Link>
-          <nav className="flex gap-4">
-            <Link href="/register">Register</Link>
-            <Link href="/profile">Profile</Link>
-            <Link href="/explore">Explore</Link>
-            <Link href="/community">Community</Link>
-=======
-
-          </nav>
-        </header>
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background`}>
+        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
   );

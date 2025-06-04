@@ -1,0 +1,95 @@
+[
+  {
+    "id": "health-va-clinic-main",
+    "name": "VA Main Street Health Clinic",
+    "category": "Healthcare",
+    "shortDescription": "General medical services, mental health support, and specialist referrals for veterans.",
+    "description": "The VA Main Street Health Clinic offers comprehensive primary care, mental health services, and access to a network of specialists. We are dedicated to providing high-quality healthcare to eligible veterans in a supportive environment.",
+    "contactInfo": {
+      "phone": "555-0101",
+      "website": "https://www.va.gov/main-street-clinic"
+    },
+    "address": {
+      "street": "123 Main Street",
+      "city": "Anytown",
+      "state": "CA",
+      "zipCode": "90210",
+      "details": "Parking available in rear"
+    },
+    "eligibility": "Eligible veterans. Check VA website for details.",
+    "applicationProcess": "Enroll for VA healthcare benefits online or in person.",
+    "keywords": ["medical", "doctor", "primary care", "mental health", "therapy"],
+    "operatingHours": "Mon-Fri, 8:00 AM - 5:00 PM"
+  },
+  {
+    "id": "edu-vet-tech-program",
+    "name": "VetTech Future Program",
+    "category": "Education",
+    "shortDescription": "Intensive training programs in software development, cybersecurity, and IT support for veterans.",
+    "description": "VetTech Future Program provides cutting-edge technology training to help veterans transition into high-demand tech careers. Courses are offered both online and in-person, with career placement assistance.",
+    "contactInfo": {
+      "email": "admissions@vettechfuture.org",
+      "website": "https://www.vettechfuture.org"
+    },
+    "address": {
+      "details": "Online and select partner campuses"
+    },
+    "eligibility": "Veterans and transitioning service members. Some programs may have prerequisites.",
+    "applicationProcess": "Apply online via our website. GI Bill benefits accepted.",
+    "keywords": ["coding bootcamp", "cybersecurity training", "IT certification", "job skills", "GI Bill"],
+    "logoUrl": "/images/logos/vettech_logo.png"
+  },
+  {
+    "id": "employ-heroes-work",
+    "name": "Heroes Work Initiative",
+    "category": "Employment",
+    "shortDescription": "Connects veterans with employers committed to hiring military talent. Resume workshops and interview coaching.",
+    "description": "The Heroes Work Initiative is a non-profit dedicated to assisting veterans in finding meaningful employment. We offer resume building, interview preparation, networking events, and direct connections to veteran-friendly companies.",
+    "contactInfo": {
+      "phone": "555-0202",
+      "email": "contact@heroeswork.org",
+      "website": "https://www.heroeswork.org"
+    },
+    "address": {
+      "street": "456 Liberty Ave",
+      "city": "Freedom City",
+      "state": "TX",
+      "zipCode": "75001"
+    },
+    "eligibility": "All veterans seeking employment.",
+    "keywords": ["jobs", "career", "resume", "interview", "hiring"],
+    "operatingHours": "Mon-Fri, 9:00 AM - 6:00 PM"
+  },
+  {
+    "id": "housing-vets-home",
+    "name": "Veterans Home Base",
+    "category": "Housing",
+    "shortDescription": "Assistance with finding affordable housing, emergency shelters, and resources for homeless veterans.",
+    "description": "Veterans Home Base provides support for veterans facing housing insecurity. We offer resources for finding affordable permanent housing, temporary emergency shelter, and connections to programs aimed at preventing veteran homelessness.",
+    "contactInfo": {
+      "phone": "555-0303",
+      "website": "https://www.vetshomebase.org"
+    },
+    "eligibility": "Veterans, with a focus on those at risk of or experiencing homelessness.",
+    "applicationProcess": "Contact our hotline or visit a local office for an assessment.",
+    "keywords": ["homelessness", "shelter", "affordable housing", "rent assistance"],
+    "logoUrl": "/images/logos/vetshomebase_logo.png"
+  },
+  {
+    "id": "legal-vets-aid",
+    "name": "Veterans Legal Aid Society",
+    "category": "Legal",
+    "shortDescription": "Free legal services for veterans on issues like benefits appeals, housing disputes, and family law.",
+    "description": "The Veterans Legal Aid Society offers pro bono legal assistance to veterans facing a variety of civil legal challenges. Our team of attorneys and paralegals can help with VA benefits claims, landlord-tenant issues, child support, and more.",
+    "contactInfo": {
+      "email": "intake@vetslegalaid.org",
+      "website": "https://www.vetslegalaid.org"
+    },
+    "address": {
+      "details": "Services offered statewide via phone and virtual consultations. Limited in-person appointments."
+    },
+    "eligibility": "Low-income veterans with qualifying legal issues.",
+    "keywords": ["lawyer", "attorney", "pro bono", "VA benefits appeal", "eviction"],
+    "operatingHours": "Intake line open Mon, Wed, Fri, 10:00 AM - 2:00 PM"
+  }
+]
