@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-=======
 import { motion, useReducedMotion } from "framer-motion"
 
 /**
@@ -60,7 +59,6 @@ export function GhostButton({ text, onClick }: { text: string; onClick: () => vo
 export default function LandingPage() {
   const shouldReduce = useReducedMotion()
   const router = useRouter()
-  const [selected, setSelected] = useState<string | null>(null)
 
   function handleGetStarted() {
     setSelected("primary")
