@@ -5,6 +5,7 @@ import Link from 'next/link'; // For the Quick Look button
 import QuestionnaireOverlay, { FormData } from '@/components/landing/QuestionnaireOverlay'; // Import component and FormData type
 import SignUpModal from '@/components/landing/SignUpModal';
 import Compass4VetsApp from './Compass4VetsApp'; // Import the dashboard component
+import Image from 'next/image';
 
 // Placeholder for military insignia icons (using a generic star SVG)
 const InsigniaIcon = ({ className }: { className?: string }) => (
@@ -84,7 +85,7 @@ export default function HomePage() {
   return (
     <div className="sunset-theme flex flex-col min-h-screen relative overflow-hidden">
       {/* Optional Header for Insignias */}
-      <header className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-10">
+      <header className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-[20]">
         <div className="flex space-x-2">
           <InsigniaIcon />
           <InsigniaIcon />
@@ -97,11 +98,19 @@ export default function HomePage() {
 
       {/* Main Content Area - Only shown if dashboard is not visible */}
       {/* The following main block will be part of the else condition for !showDashboard */}
-      <main className="flex-grow flex flex-col items-center justify-center p-4 relative z-0">
+      <main className="flex-grow flex flex-col items-center justify-start pt-16 p-4 relative z-[15]">
         {/* Central Animation Area */}
-        <div className="relative w-full max-w-md h-64 md:h-80 mb-12 md:mb-16">
-          {/* Background for soldier - can be part of the main gradient or a subtle inner glow */}
+        <div className="relative w-full max-w-md mb-12 md:mb-16 flex flex-col items-center justify-start pt-6"> {/* Align to start, add padding top */}
+          <div className="flex items-center justify-center text-center mb-4"> {/* Removed top padding, reduced bottom margin */} 
+            <Image src="/images/compass.png" alt="Compass Icon" width={64} height={64} className="mr-3 md:mr-4 w-12 h-12 md:w-16 md:h-16" />
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.6), 0 0 10px rgba(255,223,186,0.3)' }}>
+              Compass4Vets
+            </h1>
+          </div>
+          {/* This div can remain for other animations or be removed if title is sufficient */}
           <div className="absolute inset-0 flex items-center justify-center">
+            {/* Animated Soldier Placeholder - to be replaced with actual animation or image */}
+            {/* <div className="w-20 h-32 bg-green-700/50 rounded-t-full animate-soldier-run"></div> */}
           </div>
         </div>
 
@@ -130,7 +139,7 @@ export default function HomePage() {
       </main>
 
       {/* Optional Footer for Insignias */}
-      <footer className="absolute bottom-0 left-0 right-0 p-4 flex justify-center items-center z-10">
+      <footer className="absolute bottom-0 left-0 right-0 p-4 flex justify-center items-center z-[20]">
         <div className="flex space-x-3">
           <InsigniaIcon className="w-5 h-5" />
           <p className="text-xs text-sunset-text-secondary/70">Compass4Vets - Guiding Service to Success</p>
@@ -139,11 +148,23 @@ export default function HomePage() {
       </footer>
 
       {/* Drifting Clouds */}
-      <Cloud className="w-24 md:w-32 opacity-60 animate-cloud-drift-1" style={{ top: '15%', animationDuration: 'var(--cloud-1-duration)' }} />
-      <Cloud className="w-32 md:w-48 opacity-50 animate-cloud-drift-2" style={{ top: '25%', animationDuration: 'var(--cloud-2-duration)', animationDelay: '5s' }} />
-      <Cloud className="w-20 md:w-28 opacity-70 animate-cloud-drift-3" style={{ top: '35%', animationDuration: 'var(--cloud-3-duration)', animationDelay: '10s' }} />
-      <Cloud className="w-36 md:w-52 opacity-40 animate-cloud-drift-1" style={{ top: '50%', animationDuration: 'var(--cloud-4-duration)', animationDelay: '15s', transform: 'scaleX(-1)' }} />
-      <Cloud className="w-28 md:w-40 opacity-55 animate-cloud-drift-2" style={{ top: '60%', animationDuration: 'var(--cloud-5-duration)', animationDelay: '20s', transform: 'scaleX(-1)' }} />
+      <Cloud className="w-24 md:w-32 opacity-60 animate-cloud-drift-1 z-[10]" style={{ top: '15%', animationDuration: 'var(--cloud-1-duration)' }} />
+      <Cloud className="w-32 md:w-48 opacity-50 animate-cloud-drift-2 z-[10]" style={{ top: '25%', animationDuration: 'var(--cloud-2-duration)', animationDelay: '5s' }} />
+      <Cloud className="w-20 md:w-28 opacity-70 animate-cloud-drift-3 z-[10]" style={{ top: '35%', animationDuration: 'var(--cloud-3-duration)', animationDelay: '10s' }} />
+      <Cloud className="w-36 md:w-52 opacity-40 animate-cloud-drift-1 z-[10]" style={{ top: '50%', animationDuration: 'var(--cloud-4-duration)', animationDelay: '15s', transform: 'scaleX(-1)' }} />
+      <Cloud className="w-28 md:w-40 opacity-55 animate-cloud-drift-2 z-[10]" style={{ top: '60%', animationDuration: 'var(--cloud-5-duration)', animationDelay: '20s', transform: 'scaleX(-1)' }} />
+
+      {/* Soldier Image */}
+      <div className="absolute bottom-0 left-0 w-full h-[60vh] z-[5]">
+        <Image
+          src="/images/soldier.png"
+          alt="Illustration of a soldier"
+          layout="fill"
+          objectFit="contain"
+          objectPosition="bottom center"
+          priority
+        />
+      </div>
 
       <style jsx global>{`
         :root {

@@ -4,6 +4,10 @@ import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
+import { Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox"; // Assuming this exists based on shadcn/ui setup
 
@@ -17,6 +21,16 @@ interface FormErrors {
   terms?: string;
 }
 
+const serviceBranches = [
+  { value: "Army", label: "Army" },
+  { value: "Navy", label: "Navy" },
+  { value: "Air Force", label: "Air Force" },
+  { value: "Marine Corps", label: "Marine Corps" },
+  { value: "Coast Guard", label: "Coast Guard" },
+  { value: "Space Force", label: "Space Force" },
+  { value: "Other", label: "Other" },
+];
+
 export default function RegisterPage() {
   const router = useRouter();
   const [fullName, setFullName] = useState("");
@@ -24,6 +38,7 @@ export default function RegisterPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [branchOfService, setBranchOfService] = useState("");
+  const [openBranchPopover, setOpenBranchPopover] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
 
@@ -87,21 +102,21 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background text-foreground flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-lg">
-        <h1 className="mt-6 text-center text-3xl md:text-4xl font-extrabold text-gray-900">
+        <h1 className="mt-6 text-center text-3xl md:text-4xl font-extrabold text-foreground">
           Join Compass4Vets
         </h1>
-        <p className="mt-2 text-center text-md md:text-lg text-gray-600">
+        <p className="mt-2 text-center text-md md:text-lg text-muted-foreground">
           Let us guide you from service to success.
         </p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-lg">
-        <div className="bg-white py-8 px-4 shadow-xl sm:rounded-lg sm:px-10">
+        <div className="bg-card text-card-foreground border border-border py-8 px-4 shadow-xl sm:rounded-lg sm:px-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="fullName" className="block text-sm font-medium text-foreground">
                 Full Name
               </label>
               <div className="mt-1">
@@ -113,14 +128,14 @@ export default function RegisterPage() {
                   placeholder="Enter your full name"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className={`w-full ${errors.fullName ? "border-red-500 focus:ring-red-500 focus:border-red-500" : "focus:ring-indigo-500 focus:border-indigo-500"} border-gray-300 rounded-md shadow-sm`}
+                  className={`w-full ${errors.fullName ? "border-red-500 focus:ring-red-500 focus:border-red-500" : ""} rounded-md`}
                 />
               </div>
               {errors.fullName && <p className="mt-2 text-sm text-red-600">{errors.fullName}</p>}
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-foreground">
                 Email Address
               </label>
               <div className="mt-1">
@@ -132,14 +147,14 @@ export default function RegisterPage() {
                   placeholder="Enter your email address, e.g., name@domain.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className={`w-full ${errors.email ? "border-red-500 focus:ring-red-500 focus:border-red-500" : "focus:ring-indigo-500 focus:border-indigo-500"} border-gray-300 rounded-md shadow-sm`}
+                  className={`w-full ${errors.email ? "border-red-500 focus:ring-red-500 focus:border-red-500" : ""} rounded-md`}
                 />
               </div>
               {errors.email && <p className="mt-2 text-sm text-red-600">{errors.email}</p>}
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-foreground">
                 Password
               </label>
               <div className="mt-1">
@@ -151,7 +166,7 @@ export default function RegisterPage() {
                   placeholder="Create your password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className={`w-full ${errors.password ? "border-red-500 focus:ring-red-500 focus:border-red-500" : "focus:ring-indigo-500 focus:border-indigo-500"} border-gray-300 rounded-md shadow-sm`}
+                  className={`w-full ${errors.password ? "border-red-500 focus:ring-red-500 focus:border-red-500" : ""} rounded-md`}
                 />
               </div>
               <p className="mt-1 text-xs text-gray-500">
@@ -161,7 +176,7 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-foreground">
                 Confirm Password
               </label>
               <div className="mt-1">
@@ -173,26 +188,69 @@ export default function RegisterPage() {
                   placeholder="Confirm your password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className={`w-full ${errors.confirmPassword ? "border-red-500 focus:ring-red-500 focus:border-red-500" : "focus:ring-indigo-500 focus:border-indigo-500"} border-gray-300 rounded-md shadow-sm`}
+                  className={`w-full ${errors.confirmPassword ? "border-red-500 focus:ring-red-500 focus:border-red-500" : ""} rounded-md`}
                 />
               </div>
               {errors.confirmPassword && <p className="mt-2 text-sm text-red-600">{errors.confirmPassword}</p>}
             </div>
             
             <div>
-              <label htmlFor="branchOfService" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="branchOfService" className="block text-sm font-medium text-foreground">
                 Branch of Service
               </label>
               <div className="mt-1">
-                <Input
-                  id="branchOfService"
-                  name="branchOfService"
-                  type="text"
-                  placeholder="e.g., Army, Navy, Air Force, Marines, Coast Guard, Space Force"
-                  value={branchOfService}
-                  onChange={(e) => setBranchOfService(e.target.value)}
-                  className={`w-full ${errors.branchOfService ? "border-red-500 focus:ring-red-500 focus:border-red-500" : "focus:ring-indigo-500 focus:border-indigo-500"} border-gray-300 rounded-md shadow-sm`}
-                />
+                <Popover open={openBranchPopover} onOpenChange={setOpenBranchPopover}>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      role="combobox"
+                      aria-expanded={openBranchPopover}
+                      className={cn(
+                        "w-full justify-between font-normal",
+                        !branchOfService && "text-muted-foreground",
+                        errors.branchOfService && "border-red-500 focus:ring-red-500 focus:border-red-500"
+                      )}
+                      id="branchOfService"
+                    >
+                      {branchOfService
+                        ? serviceBranches.find((branch) => branch.value === branchOfService)?.label
+                        : "Select branch of service..."}
+                      <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-[--radix-popover-trigger-width] p-0">
+                    <Command>
+                      <CommandInput placeholder="Search branch..." />
+                      <CommandList>
+                        <CommandEmpty>No branch found.</CommandEmpty>
+                        <CommandGroup>
+                          {serviceBranches.map((branch) => (
+                            <CommandItem
+                              key={branch.value}
+                              value={branch.value}
+                              onSelect={(currentValue) => {
+                                setBranchOfService(currentValue === branchOfService ? "" : currentValue);
+                                setOpenBranchPopover(false);
+                                // Manually clear error if a selection is made
+                                if (errors.branchOfService) {
+                                  setErrors(prev => ({...prev, branchOfService: undefined}))
+                                }
+                              }}
+                            >
+                              <Check
+                                className={cn(
+                                  "mr-2 h-4 w-4",
+                                  branchOfService === branch.value ? "opacity-100" : "opacity-0"
+                                )}
+                              />
+                              {branch.label}
+                            </CommandItem>
+                          ))}
+                        </CommandGroup>
+                      </CommandList>
+                    </Command>
+                  </PopoverContent>
+                </Popover>
               </div>
               {errors.branchOfService && <p className="mt-2 text-sm text-red-600">{errors.branchOfService}</p>}
             </div>
@@ -203,12 +261,12 @@ export default function RegisterPage() {
                   id="terms"
                   checked={agreedToTerms}
                   onCheckedChange={(checked: boolean) => setAgreedToTerms(checked)}
-                  className={`focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded ${errors.terms ? "border-red-500" : ""}`}
+                  className={`h-4 w-4 rounded ${errors.terms ? "border-red-500" : ""}`}
                 />
               </div>
               <div className="ml-3 text-sm">
-                <label htmlFor="terms" className={`font-medium ${errors.terms ? "text-red-600" : "text-gray-700"}`}>
-                  I agree to the <Link href="/terms" className="font-medium text-indigo-600 hover:text-indigo-500" target="_blank" rel="noopener noreferrer">Terms & Conditions</Link> and <Link href="/privacy" className="font-medium text-indigo-600 hover:text-indigo-500" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>.
+                <label htmlFor="terms" className={`font-medium ${errors.terms ? "text-destructive" : "text-foreground"}`}>
+                  I agree to the <Link href="/terms" className="font-medium text-primary hover:text-primary/90" target="_blank" rel="noopener noreferrer">Terms & Conditions</Link> and <Link href="/privacy" className="font-medium text-primary hover:text-primary/90" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>.
                 </label>
                 {errors.terms && !agreedToTerms && <p className="text-sm text-red-600">{errors.terms}</p>} 
               </div>
@@ -217,7 +275,7 @@ export default function RegisterPage() {
             <div>
               <Button
                 type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full py-3 px-4 text-sm font-medium"
               >
                 Create Account
               </Button>
@@ -227,10 +285,10 @@ export default function RegisterPage() {
            <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300" />
+                <div className="w-full border-t border-border" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">
+                <span className="px-2 bg-card text-muted-foreground">
                   Already have an account?
                 </span>
               </div>
@@ -239,7 +297,7 @@ export default function RegisterPage() {
             <div className="mt-6">
               <Button
                 variant="outline"
-                className="w-full flex justify-center py-3 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                variant="outline" className="w-full py-3 px-4 text-sm font-medium"
                 onClick={() => router.push('/login')}
               >
                 Sign In

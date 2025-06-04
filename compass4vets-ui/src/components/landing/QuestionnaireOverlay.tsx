@@ -310,7 +310,7 @@ export default function QuestionnaireOverlay({ isOpen, onClose, onSubmit, initia
                         type="button"
                         onClick={handleBack}
                         disabled={currentQuestionIndex === 0}
-                        className="p-3 text-3xl rounded-full disabled:opacity-50 disabled:cursor-not-allowed aspect-square flex items-center justify-center bg-sunset-primary text-white hover:bg-sunset-primary-hover focus:ring-sunset-accent"
+                        className="p-3 text-3xl text-sunset-primary hover:text-sunset-primary-hover focus:text-sunset-primary-hover focus:ring-2 focus:ring-sunset-accent focus:ring-offset-2 rounded-full disabled:opacity-50 disabled:cursor-not-allowed aspect-square flex items-center justify-center"
                         aria-label="Previous question"
                       >
                         &larr;
@@ -368,7 +368,7 @@ export default function QuestionnaireOverlay({ isOpen, onClose, onSubmit, initia
                       <button
                         type="button"
                         onClick={handleNext}
-                        className="p-3 text-3xl rounded-full disabled:opacity-50 disabled:cursor-not-allowed aspect-square flex items-center justify-center bg-sunset-primary text-white hover:bg-sunset-primary-hover focus:ring-sunset-accent"
+                        className="p-3 text-3xl text-sunset-primary hover:text-sunset-primary-hover focus:text-sunset-primary-hover focus:ring-2 focus:ring-sunset-accent focus:ring-offset-2 rounded-full disabled:opacity-50 disabled:cursor-not-allowed aspect-square flex items-center justify-center"
                         aria-label={currentQuestionIndex === questions.length - 1 ? 'Submit answers' : 'Next question'}
                       >
                         &rarr;

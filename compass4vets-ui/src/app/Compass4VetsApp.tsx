@@ -117,7 +117,7 @@ export default function Compass4VetsApp({ questionnaireData }: { questionnaireDa
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen bg-background text-foreground">
       {/* ─────────────── Hero ─────────────── */}
       {/* ─────────────── Hero ─────────────── */}
       <section className="relative overflow-hidden py-12 sm:py-20 lg:py-24">
@@ -130,7 +130,7 @@ export default function Compass4VetsApp({ questionnaireData }: { questionnaireDa
           >
             Compass4Vets
           </motion.h1>
-          <p className="mt-4 max-w-3xl text-lg sm:text-xl text-gray-600">
+          <p className="mt-4 max-w-3xl text-lg sm:text-xl text-muted-foreground">
             Quickly discover employment, education, healthcare, and housing
             resources curated for U.S. veterans transitioning to civilian life.
           </p>
@@ -138,11 +138,11 @@ export default function Compass4VetsApp({ questionnaireData }: { questionnaireDa
       </section>
 
       {/* ───────── Search bar (now above category chips) ───────── */}
-      <section className="w-full bg-gray-50 py-5 mt-10"> {/* Changed background to bg-gray-50, removed backdrop-blur */}
+      <section className="w-full bg-background py-5 mt-10"> {/* Changed background to bg-gray-50, removed backdrop-blur */}
           <div className="mx-auto grid max-w-5xl grid-cols-12 items-center gap-x-4 gap-y-3 px-6">
             {/* Location */}
             <div className="col-span-12 flex items-center gap-2 sm:col-span-5">
-              <MapPin className="h-5 w-5 text-gray-500" aria-hidden="true" />
+              <MapPin className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
               <Input
                 placeholder="ZIP code or city/state"
                 value={location}
@@ -152,7 +152,7 @@ export default function Compass4VetsApp({ questionnaireData }: { questionnaireDa
             </div>
             {/* Keyword */}
             <div className="col-span-12 flex items-center gap-2 sm:col-span-5">
-              <Search className="h-5 w-5 text-gray-500" aria-hidden="true" />
+              <Search className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
               <Input
                 placeholder="Keyword (e.g., résumé, PTSD, rental)"
                 value={keyword}
@@ -177,7 +177,7 @@ export default function Compass4VetsApp({ questionnaireData }: { questionnaireDa
               key={id}
               onClick={() => setActiveCat(activeCat === id ? null : id)}
               whileTap={{ scale: 0.97 }}
-              className={`relative isolate flex flex-col items-center justify-center overflow-hidden rounded-2xl bg-white p-4 shadow transition hover:shadow-md focus:outline-none ${
+              className={`relative isolate flex flex-col items-center justify-center overflow-hidden rounded-2xl bg-card p-4 shadow transition hover:shadow-md focus:outline-none ${
                 activeCat === id ? "ring-2 ring-primary" : ""
               }`}
             >
@@ -185,7 +185,7 @@ export default function Compass4VetsApp({ questionnaireData }: { questionnaireDa
               <span
                 className={`pointer-events-none absolute inset-0 z-0 bg-gradient-to-br opacity-10 ${color}`}
               />
-              <Icon aria-hidden="true" className="z-10 h-7 w-7 text-gray-700" />
+              <Icon aria-hidden="true" className="z-10 h-7 w-7 text-card-foreground" />
               <span className="z-10 mt-2 text-sm font-medium">{label}</span>
             </motion.button>
           ))}
@@ -195,7 +195,7 @@ export default function Compass4VetsApp({ questionnaireData }: { questionnaireDa
       {/* ───────────── Results grid ───────────── */}
       <section className="mx-auto mt-12 max-w-5xl px-6 pb-24">
         {results.length === 0 ? (
-          <p className="text-center text-gray-500">
+          <p className="text-center text-muted-foreground">
             No results yet — try a search above.
           </p>
         ) : (
@@ -219,10 +219,10 @@ export default function Compass4VetsApp({ questionnaireData }: { questionnaireDa
                 <Card className="h-full overflow-hidden rounded-2xl shadow">
                   <CardContent className="flex h-full flex-col justify-between p-5">
                     <div>
-                      <h3 className="text-lg font-semibold leading-6 text-gray-900">
+                      <h3 className="text-lg font-semibold leading-6 text-card-foreground">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-sm text-gray-600 line-clamp-3">
+                      <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
                         {item.description}
                       </p>
                     </div>

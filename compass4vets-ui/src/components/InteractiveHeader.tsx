@@ -18,6 +18,7 @@ export default function InteractiveHeader() {
           <Link href="/explore">Explore</Link>
           <Link href="/services">Services</Link>
           <Link href="/community">Community</Link>
+          <Link href="/chat">Chat</Link>
         </nav>
     </header>
   );
