@@ -82,7 +82,7 @@ export default function HomePage() {
     return <Compass4VetsApp questionnaireData={finalQuestionnaireData} />;
   }
   return (
-    <div className="military-green-theme flex flex-col min-h-screen relative overflow-hidden">
+    <div className="sunset-theme flex flex-col min-h-screen relative overflow-hidden">
       {/* Optional Header for Insignias */}
       <header className="absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-10">
         <div className="flex space-x-2">

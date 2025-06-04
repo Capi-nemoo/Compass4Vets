@@ -47,112 +47,113 @@
 :root {
   --radius: 0.625rem;
 
-  /* Military Green Palette Base */
-  --military-dark-olive: oklch(0.48 0.06 140);        /* Even lighter dark green */
-  --military-olive-drab: oklch(0.60 0.07 135);        /* Even lighter medium green */
-  --military-light-sage: oklch(0.94 0.015 145);       /* Even lighter, less saturated green (backgrounds) */
-  --military-khaki-green: oklch(0.78 0.04 130);       /* Lighter, less saturated light-medium green */
-  --military-accent-green: oklch(0.63 0.085 140);     /* Lighter, less saturated accent green */
-  --military-foreground-on-dark: oklch(0.90 0.025 140);/* Slightly lighter, less saturated light green text */
-  --military-foreground-on-light: oklch(0.34 0.05 140);/* Slightly lighter, less saturated dark green text */
-  --military-primary-fg: oklch(0.97 0.008 140);       /* Very light, very desaturated green/off-white for primary button text */
-  --military-destructive-base: oklch(0.5 0.18 25);    /* Muted/Dark Red for destructive actions */
+  /* Sunset Palette Base */
+  --sunset-primary: #f97316;
+  --sunset-primary-hover: #ea580c;
+  --sunset-accent: #e11d48;
+  --sunset-text-primary: #3b1f0c;
+  --sunset-text-secondary: #7c3a1e;
+  --sunset-input-border: #fdba74;
+  --sunset-input-bg: #fff7ed;
+  --sunset-overlay-bg: rgba(0, 0, 0, 0.5);
+  --sunset-modal-bg: #fff7ed;
+  --sunset-destructive-base: oklch(0.5 0.18 25);
 
-  /* Light Theme Variables - simplified four-tone palette */
-  --background: #CFCFD1;
-  --foreground: #000000;
-  --card: #CFCFD1;
-  --card-foreground: #000000;
-  --popover: #CFCFD1;
-  --popover-foreground: #000000;
-  --primary: #433CC3;
+  /* Light Theme Variables - Sunset palette */
+  --background: #fff7ed;
+  --foreground: #3b1f0c;
+  --card: #fff7ed;
+  --card-foreground: #3b1f0c;
+  --popover: #fff7ed;
+  --popover-foreground: #3b1f0c;
+  --primary: var(--sunset-primary);
   --primary-foreground: #ffffff;
-  --secondary: #CFCFD1;
-  --secondary-foreground: #000000;
-  --muted: #CFCFD1;
-  --muted-foreground: #000000;
-  --accent: #7D2BC7;
+  --secondary: #fed7aa;
+  --secondary-foreground: #3b1f0c;
+  --muted: #fee2e2;
+  --muted-foreground: #3b1f0c;
+  --accent: var(--sunset-accent);
   --accent-foreground: #ffffff;
-  --destructive: var(--military-destructive-base);
-  --border: #CFCFD1;
-  --input: #CFCFD1;
-  --ring: #7D2BC7;
+  --destructive: var(--sunset-destructive-base);
+  --border: #fecaca;
+  --input: var(--sunset-input-bg);
+  --ring: var(--sunset-accent);
 
-  /* Chart colors (can be refined or kept if they work with green) */
-  --chart-1: oklch(0.6 0.1 150); /* Adjusted green */
-  --chart-2: oklch(0.55 0.09 160); /* Adjusted green */
-  --chart-3: oklch(0.5 0.08 170); /* Adjusted green */
-  --chart-4: oklch(0.65 0.09 140); /* Adjusted green */
-  --chart-5: oklch(0.7 0.08 130); /* Adjusted green */
+  /* Chart colors */
+  --chart-1: #f97316;
+  --chart-2: #fb923c;
+  --chart-3: #f87171;
+  --chart-4: #f472b6;
+  --chart-5: #e11d48;
 
-  /* Sidebar Variables (Light Theme) using four-tone palette */
-  --sidebar: #CFCFD1;
-  --sidebar-foreground: #000000;
-  --sidebar-primary: #433CC3;
+  /* Sidebar Variables */
+  --sidebar: #fff7ed;
+  --sidebar-foreground: #3b1f0c;
+  --sidebar-primary: var(--sunset-primary);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #7D2BC7;
+  --sidebar-accent: var(--sunset-accent);
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #CFCFD1;
-  --sidebar-ring: #7D2BC7;
+  --sidebar-border: #fecaca;
+  --sidebar-ring: var(--sunset-accent);
 
-  /* Military Green Theme Specific Variables */
-  --military-theme-static-bg: oklch(0.65 0.08 138); /* Lighter medium-soft olive for theme background */
-  --military-theme-primary: oklch(0.50 0.085 135);    /* Lighter Olive for primary actions */
-  --military-theme-primary-hover: oklch(0.45 0.08 133); /* Lighter Olive for hover */
-  --military-theme-primary-foreground: var(--military-primary-fg);
+  /* Sunset Theme Specific Variables */
+  --sunset-theme-static-bg: #fed7aa;
+  --sunset-theme-primary: var(--sunset-primary);
+  --sunset-theme-primary-hover: var(--sunset-primary-hover);
+  --sunset-theme-primary-foreground: #ffffff;
 
-  --military-theme-input-border: oklch(0.65 0.05 135); /* Muted Khaki for input borders */
-  --military-theme-input-bg: oklch(0.90 0.025 145);   /* Very light Sage for input backgrounds */
-  
-  --military-theme-text-primary: var(--military-foreground-on-light); /* Dark green text */
-  --military-theme-text-secondary: oklch(0.53 0.06 138); /* Lighter medium-dark green for secondary text */
-  --military-theme-text-on-dark-bg: var(--military-foreground-on-dark); /* Light green text for dark backgrounds */
+  --sunset-theme-input-border: var(--sunset-input-border);
+  --sunset-theme-input-bg: var(--sunset-input-bg);
 
-  --military-theme-overlay-bg: oklch(0.3 0.07 140 / 0.7); /* Semi-transparent dark olive for overlays */
-  --military-theme-modal-bg: oklch(0.88 0.03 142);     /* Light Sage for modal background */
-  --military-theme-modal-header-bg: oklch(0.57 0.08 136); /* Lighter Olive Drab for modal header */
+  --sunset-theme-text-primary: var(--sunset-text-primary);
+  --sunset-theme-text-secondary: var(--sunset-text-secondary);
+  --sunset-theme-text-on-dark-bg: #fff7ed;
+
+  --sunset-theme-overlay-bg: var(--sunset-overlay-bg);
+  --sunset-theme-modal-bg: var(--sunset-modal-bg);
+  --sunset-theme-modal-header-bg: var(--sunset-primary-hover);
 
   /* Font */
   --font-montserrat: 'Montserrat', var(--font-geist-sans), sans-serif;
 }
 
 .dark {
-  /* Dark Theme Variables using the four-tone palette */
-  --background: #CFCFD1;
-  --foreground: #000000;
-  --card: #CFCFD1;
-  --card-foreground: #000000;
-  --popover: #CFCFD1;
-  --popover-foreground: #000000;
-  --primary: #433CC3;
+  /* Dark Theme Variables - Sunset palette */
+  --background: #fff7ed;
+  --foreground: #3b1f0c;
+  --card: #fff7ed;
+  --card-foreground: #3b1f0c;
+  --popover: #fff7ed;
+  --popover-foreground: #3b1f0c;
+  --primary: var(--sunset-primary);
   --primary-foreground: #ffffff;
-  --secondary: #CFCFD1;
-  --secondary-foreground: #000000;
-  --muted: #CFCFD1;
-  --muted-foreground: #000000;
-  --accent: #7D2BC7;
+  --secondary: #fed7aa;
+  --secondary-foreground: #3b1f0c;
+  --muted: #fee2e2;
+  --muted-foreground: #3b1f0c;
+  --accent: var(--sunset-accent);
   --accent-foreground: #ffffff;
-  --destructive: var(--military-destructive-base);
-  --border: #CFCFD1;
-  --input: #CFCFD1;
-  --ring: #7D2BC7;
+  --destructive: var(--sunset-destructive-base);
+  --border: #fecaca;
+  --input: var(--sunset-input-bg);
+  --ring: var(--sunset-accent);
 
   /* Chart colors (can be refined for dark theme or use light theme's if contrast is good) */
-  --chart-1: oklch(0.65 0.1 150);
-  --chart-2: oklch(0.60 0.09 160);
-  --chart-3: oklch(0.55 0.08 170);
-  --chart-4: oklch(0.70 0.09 140);
-  --chart-5: oklch(0.75 0.08 130);
+  --chart-1: #f97316;
+  --chart-2: #fb923c;
+  --chart-3: #f87171;
+  --chart-4: #f472b6;
+  --chart-5: #e11d48;
 
   /* Sidebar Variables (Dark Theme) */
-  --sidebar: #CFCFD1;
-  --sidebar-foreground: #000000;
-  --sidebar-primary: #433CC3;
+  --sidebar: #fff7ed;
+  --sidebar-foreground: #3b1f0c;
+  --sidebar-primary: var(--sunset-primary);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #7D2BC7;
+  --sidebar-accent: var(--sunset-accent);
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #CFCFD1;
-  --sidebar-ring: #7D2BC7;
+  --sidebar-border: #fecaca;
+  --sidebar-ring: var(--sunset-accent);
 }
 
 @layer base {
@@ -164,8 +165,8 @@
   }
 }
 
-/* Military Green Theme Specific Styles */
-.military-green-theme {
+/* Sunset Theme Specific Styles */
+.sunset-theme {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-montserrat);
@@ -174,16 +175,16 @@
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-.military-green-theme h1,
-.military-green-theme h2,
-.military-green-theme h3,
-.military-green-theme h4,
-.military-green-theme h5,
-.military-green-theme h6 {
+.sunset-theme h1,
+.sunset-theme h2,
+.sunset-theme h3,
+.sunset-theme h4,
+.sunset-theme h5,
+.sunset-theme h6 {
   color: var(--foreground);
 }
 
-.military-green-theme .button-primary {
+.sunset-theme .button-primary {
   background-color: var(--primary);
   color: var(--primary-foreground);
   border: 1px solid transparent;
@@ -195,23 +196,23 @@
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
   transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-.military-green-theme .button-primary:hover {
+.sunset-theme .button-primary:hover {
   background-color: var(--accent);
   transform: translateY(-1px);
   box-shadow: 0 6px 8px -1px rgba(0,0,0,0.1), 0 3px 5px -1px rgba(0,0,0,0.07);
 }
-.military-green-theme .button-primary:focus-visible {
+.sunset-theme .button-primary:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
-.military-green-theme input[type="text"],
-.military-green-theme input[type="email"],
-.military-green-theme input[type="password"],
-.military-green-theme input[type="date"],
-.military-green-theme input[type="tel"],
-.military-green-theme textarea,
-.military-green-theme select {
+.sunset-theme input[type="text"],
+.sunset-theme input[type="email"],
+.sunset-theme input[type="password"],
+.sunset-theme input[type="date"],
+.sunset-theme input[type="tel"],
+.sunset-theme textarea,
+.sunset-theme select {
   width: 100%;
   padding: 0.75rem 1rem;
   font-size: 1rem; /* 16px for inputs */
@@ -222,21 +223,36 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-.military-green-theme input[type="text"]:focus,
-.military-green-theme input[type="email"]:focus,
-.military-green-theme input[type="password"]:focus,
-.military-green-theme input[type="date"]:focus,
-.military-green-theme input[type="tel"]:focus,
-.military-green-theme textarea:focus,
-.military-green-theme select:focus {
+.sunset-theme input[type="text"]:focus,
+.sunset-theme input[type="email"]:focus,
+.sunset-theme input[type="password"]:focus,
+.sunset-theme input[type="date"]:focus,
+.sunset-theme input[type="tel"]:focus,
+.sunset-theme textarea:focus,
+.sunset-theme select:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
   outline: none;
 }
-.military-green-theme input::placeholder,
-.military-green-theme textarea::placeholder {
+.sunset-theme input::placeholder,
+.sunset-theme textarea::placeholder {
   color: var(--muted-foreground);
   opacity: 0.8;
+}
+
+@layer utilities {
+  .text-sunset-accent { color: var(--sunset-accent); }
+  .text-sunset-text-primary { color: var(--sunset-text-primary); }
+  .text-sunset-text-secondary { color: var(--sunset-text-secondary); }
+  .bg-sunset-primary { background-color: var(--sunset-primary); }
+  .hover\:bg-sunset-primary-hover:hover { background-color: var(--sunset-primary-hover); }
+  .bg-sunset-input-bg { background-color: var(--sunset-input-bg); }
+  .border-sunset-input-border { border-color: var(--sunset-input-border); }
+  .bg-sunset-overlay-bg { background-color: var(--sunset-overlay-bg); }
+  .bg-sunset-modal-bg { background-color: var(--sunset-modal-bg); }
+  .focus\:ring-sunset-accent:focus { box-shadow: 0 0 0 2px var(--sunset-accent); }
+  .focus\:border-sunset-accent:focus { border-color: var(--sunset-accent); }
+  .hover\:text-sunset-primary:hover { color: var(--sunset-primary); }
 }
 
 
