@@ -12,7 +12,7 @@
 
 # testing
 /coverage
-
+./src/services/api.ts
 # next.js
 /.next/
 /out/
