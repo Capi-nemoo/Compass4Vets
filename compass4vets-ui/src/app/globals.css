@@ -59,24 +59,24 @@
   --military-destructive-base: oklch(0.5 0.18 25);    /* Muted/Dark Red for destructive actions */
 
   /* Light Theme Variables - simplified four-tone palette */
-  --background: #ECFAE5; /* lightest background/base tone */
+  --background: #CFCFD1;
   --foreground: #000000;
-  --card: #DDF6D2; /* secondary backgrounds or cards */
+  --card: #CFCFD1;
   --card-foreground: #000000;
-  --popover: #DDF6D2;
+  --popover: #CFCFD1;
   --popover-foreground: #000000;
-  --primary: #CAE8BD; /* buttons and subtle panels */
-  --primary-foreground: #000000;
-  --secondary: #DDF6D2;
+  --primary: #433CC3;
+  --primary-foreground: #ffffff;
+  --secondary: #CFCFD1;
   --secondary-foreground: #000000;
-  --muted: #ECFAE5;
+  --muted: #CFCFD1;
   --muted-foreground: #000000;
-  --accent: #B0DB9C; /* interactive accents */
-  --accent-foreground: #000000;
+  --accent: #7D2BC7;
+  --accent-foreground: #ffffff;
   --destructive: var(--military-destructive-base);
-  --border: #CAE8BD;
-  --input: #ECFAE5;
-  --ring: #B0DB9C;
+  --border: #CFCFD1;
+  --input: #CFCFD1;
+  --ring: #7D2BC7;
 
   /* Chart colors (can be refined or kept if they work with green) */
   --chart-1: oklch(0.6 0.1 150); /* Adjusted green */
@@ -86,14 +86,14 @@
   --chart-5: oklch(0.7 0.08 130); /* Adjusted green */
 
   /* Sidebar Variables (Light Theme) using four-tone palette */
-  --sidebar: #DDF6D2;
+  --sidebar: #CFCFD1;
   --sidebar-foreground: #000000;
-  --sidebar-primary: #B0DB9C;
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: #CAE8BD;
-  --sidebar-accent-foreground: #000000;
-  --sidebar-border: #CAE8BD;
-  --sidebar-ring: #B0DB9C;
+  --sidebar-primary: #433CC3;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #7D2BC7;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #CFCFD1;
+  --sidebar-ring: #7D2BC7;
 
   /* Military Green Theme Specific Variables */
   --military-theme-static-bg: oklch(0.65 0.08 138); /* Lighter medium-soft olive for theme background */
@@ -118,24 +118,24 @@
 
 .dark {
   /* Dark Theme Variables using the four-tone palette */
-  --background: #ECFAE5;
+  --background: #CFCFD1;
   --foreground: #000000;
-  --card: #DDF6D2;
+  --card: #CFCFD1;
   --card-foreground: #000000;
-  --popover: #DDF6D2;
+  --popover: #CFCFD1;
   --popover-foreground: #000000;
-  --primary: #CAE8BD;
-  --primary-foreground: #000000;
-  --secondary: #DDF6D2;
+  --primary: #433CC3;
+  --primary-foreground: #ffffff;
+  --secondary: #CFCFD1;
   --secondary-foreground: #000000;
-  --muted: #ECFAE5;
+  --muted: #CFCFD1;
   --muted-foreground: #000000;
-  --accent: #B0DB9C;
-  --accent-foreground: #000000;
+  --accent: #7D2BC7;
+  --accent-foreground: #ffffff;
   --destructive: var(--military-destructive-base);
-  --border: #CAE8BD;
-  --input: #ECFAE5;
-  --ring: #B0DB9C;
+  --border: #CFCFD1;
+  --input: #CFCFD1;
+  --ring: #7D2BC7;
 
   /* Chart colors (can be refined for dark theme or use light theme's if contrast is good) */
   --chart-1: oklch(0.65 0.1 150);
@@ -145,14 +145,14 @@
   --chart-5: oklch(0.75 0.08 130);
 
   /* Sidebar Variables (Dark Theme) */
-  --sidebar: #DDF6D2;
+  --sidebar: #CFCFD1;
   --sidebar-foreground: #000000;
-  --sidebar-primary: #B0DB9C;
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: #CAE8BD;
-  --sidebar-accent-foreground: #000000;
-  --sidebar-border: #CAE8BD;
-  --sidebar-ring: #B0DB9C;
+  --sidebar-primary: #433CC3;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #7D2BC7;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #CFCFD1;
+  --sidebar-ring: #7D2BC7;
 }
 
 @layer base {

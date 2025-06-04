@@ -91,7 +91,7 @@ export default function LandingPage() {
 
   return (
     <motion.div
-      className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] text-white"
+      className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-[#433CC3] to-[#7D2BC7] text-white"
       initial="hidden"
       animate={animateState}
       variants={containerVariants}
