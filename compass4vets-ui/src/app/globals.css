@@ -58,25 +58,25 @@
   --military-primary-fg: oklch(0.97 0.008 140);       /* Very light, very desaturated green/off-white for primary button text */
   --military-destructive-base: oklch(0.5 0.18 25);    /* Muted/Dark Red for destructive actions */
 
-  /* Light Theme Variables (using Military Palette) */
-  --background: var(--military-light-sage);
-  --foreground: var(--military-foreground-on-light);
-  --card: oklch(0.90 0.022 145); /* Slightly off-white green */
-  --card-foreground: var(--military-foreground-on-light);
-  --popover: oklch(0.90 0.022 145);
-  --popover-foreground: var(--military-foreground-on-light);
-  --primary: var(--military-olive-drab);
-  --primary-foreground: var(--military-primary-fg);
-  --secondary: var(--military-khaki-green);
-  --secondary-foreground: var(--military-foreground-on-light);
-  --muted: oklch(0.85 0.03 140);
-  --muted-foreground: oklch(0.45 0.05 135);
-  --accent: var(--military-accent-green);
-  --accent-foreground: var(--military-primary-fg);
+  /* Light Theme Variables - simplified four-tone palette */
+  --background: #ECFAE5; /* lightest background/base tone */
+  --foreground: #000000;
+  --card: #DDF6D2; /* secondary backgrounds or cards */
+  --card-foreground: #000000;
+  --popover: #DDF6D2;
+  --popover-foreground: #000000;
+  --primary: #CAE8BD; /* buttons and subtle panels */
+  --primary-foreground: #000000;
+  --secondary: #DDF6D2;
+  --secondary-foreground: #000000;
+  --muted: #ECFAE5;
+  --muted-foreground: #000000;
+  --accent: #B0DB9C; /* interactive accents */
+  --accent-foreground: #000000;
   --destructive: var(--military-destructive-base);
-  --border: oklch(0.80 0.03 140);
-  --input: oklch(0.88 0.025 145);
-  --ring: var(--military-accent-green);
+  --border: #CAE8BD;
+  --input: #ECFAE5;
+  --ring: #B0DB9C;
 
   /* Chart colors (can be refined or kept if they work with green) */
   --chart-1: oklch(0.6 0.1 150); /* Adjusted green */
@@ -85,15 +85,15 @@
   --chart-4: oklch(0.65 0.09 140); /* Adjusted green */
   --chart-5: oklch(0.7 0.08 130); /* Adjusted green */
 
-  /* Sidebar Variables (Light Theme) */
-  --sidebar: oklch(0.88 0.025 145); /* Light sage variant */
-  --sidebar-foreground: var(--military-foreground-on-light);
-  --sidebar-primary: var(--military-olive-drab);
-  --sidebar-primary-foreground: var(--military-primary-fg);
-  --sidebar-accent: var(--military-accent-green);
-  --sidebar-accent-foreground: var(--military-primary-fg);
-  --sidebar-border: oklch(0.80 0.03 140);
-  --sidebar-ring: var(--military-accent-green);
+  /* Sidebar Variables (Light Theme) using four-tone palette */
+  --sidebar: #DDF6D2;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #B0DB9C;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #CAE8BD;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #CAE8BD;
+  --sidebar-ring: #B0DB9C;
 
   /* Military Green Theme Specific Variables */
   --military-theme-static-bg: oklch(0.65 0.08 138); /* Lighter medium-soft olive for theme background */
@@ -117,25 +117,25 @@
 }
 
 .dark {
-  /* Dark Theme Variables (using Military Palette) */
-  --background: var(--military-dark-olive);
-  --foreground: var(--military-foreground-on-dark);
-  --card: oklch(0.25 0.06 140); /* Darker, slightly desaturated green */
-  --card-foreground: var(--military-foreground-on-dark);
-  --popover: oklch(0.25 0.06 140);
-  --popover-foreground: var(--military-foreground-on-dark);
-  --primary: var(--military-accent-green);
-  --primary-foreground: var(--military-primary-fg);
-  --secondary: var(--military-olive-drab);
-  --secondary-foreground: var(--military-foreground-on-dark);
-  --muted: oklch(0.30 0.05 138); /* Dark muted green */
-  --muted-foreground: oklch(0.75 0.04 140); /* Lighter muted green text */
-  --accent: var(--military-khaki-green);
-  --accent-foreground: var(--military-foreground-on-light); /* Darker text on khaki */
+  /* Dark Theme Variables using the four-tone palette */
+  --background: #ECFAE5;
+  --foreground: #000000;
+  --card: #DDF6D2;
+  --card-foreground: #000000;
+  --popover: #DDF6D2;
+  --popover-foreground: #000000;
+  --primary: #CAE8BD;
+  --primary-foreground: #000000;
+  --secondary: #DDF6D2;
+  --secondary-foreground: #000000;
+  --muted: #ECFAE5;
+  --muted-foreground: #000000;
+  --accent: #B0DB9C;
+  --accent-foreground: #000000;
   --destructive: var(--military-destructive-base);
-  --border: oklch(0.4 0.05 140 / 0.5); /* Semi-transparent border */
-  --input: oklch(0.35 0.055 140); /* Dark input background */
-  --ring: var(--military-accent-green);
+  --border: #CAE8BD;
+  --input: #ECFAE5;
+  --ring: #B0DB9C;
 
   /* Chart colors (can be refined for dark theme or use light theme's if contrast is good) */
   --chart-1: oklch(0.65 0.1 150);
@@ -145,14 +145,14 @@
   --chart-5: oklch(0.75 0.08 130);
 
   /* Sidebar Variables (Dark Theme) */
-  --sidebar: oklch(0.25 0.06 140); /* Darker green for sidebar */
-  --sidebar-foreground: var(--military-foreground-on-dark);
-  --sidebar-primary: var(--military-accent-green);
-  --sidebar-primary-foreground: var(--military-primary-fg);
-  --sidebar-accent: var(--military-khaki-green);
-  --sidebar-accent-foreground: var(--military-foreground-on-light);
-  --sidebar-border: oklch(0.4 0.05 140 / 0.4);
-  --sidebar-ring: var(--military-accent-green);
+  --sidebar: #DDF6D2;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #B0DB9C;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #CAE8BD;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #CAE8BD;
+  --sidebar-ring: #B0DB9C;
 }
 
 @layer base {
@@ -166,60 +166,39 @@
 
 /* Military Green Theme Specific Styles */
 .military-green-theme {
-  background: var(--military-theme-static-bg);
-  color: var(--military-theme-text-primary);
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-montserrat);
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden; /* Prevent horizontal scroll */
-
-  /* Override base theme variables within this scope */
-  --background: var(--military-theme-static-bg);
-  --foreground: var(--military-theme-text-primary);
-  
-  --primary: var(--military-theme-primary);
-  --primary-foreground: var(--military-theme-primary-foreground);
-  
-  --secondary: var(--military-grad-end); /* Using a lighter gradient color for secondary bg */
-  --secondary-foreground: var(--military-theme-text-secondary);
-
-  --muted: var(--military-theme-input-bg);
-  --muted-foreground: var(--military-theme-text-secondary);
-
-  --accent: var(--military-theme-primary-hover);
-  --accent-foreground: var(--military-theme-primary-foreground);
-  
-  --border: var(--military-theme-input-border);
-  --input: var(--military-theme-input-bg);
-  --ring: var(--military-theme-primary-hover);
-
-  --card: var(--military-theme-modal-bg);
-  --card-foreground: var(--military-theme-text-primary);
-
-  --popover: var(--military-theme-modal-bg);
-  --popover-foreground: var(--military-theme-text-primary);
 }
 
-.military-green-theme h1, .military-green-theme h2, .military-green-theme h3, .military-green-theme h4, .military-green-theme h5, .military-green-theme h6 {
-  color: var(--military-theme-text-primary);
+.military-green-theme h1,
+.military-green-theme h2,
+.military-green-theme h3,
+.military-green-theme h4,
+.military-green-theme h5,
+.military-green-theme h6 {
+  color: var(--foreground);
 }
 
 .military-green-theme .button-primary {
-  background-color: var(--military-theme-primary);
-  color: var(--military-theme-primary-foreground);
+  background-color: var(--primary);
+  color: var(--primary-foreground);
   border: 1px solid transparent;
   border-radius: 9999px; /* Large rounded button */
   padding: 1rem 2rem;
   font-size: 1.125rem; /* 18px */
   font-weight: 600;
   text-align: center;
-  box-shadow: 0 4px 6px -1px oklch(var(--military-dark-olive) / 0.1), 0 2px 4px -1px oklch(var(--military-dark-olive) / 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
   transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .military-green-theme .button-primary:hover {
-  background-color: var(--military-theme-primary-hover);
+  background-color: var(--accent);
   transform: translateY(-1px);
-  box-shadow: 0 6px 8px -1px oklch(var(--military-dark-olive) / 0.1), 0 3px 5px -1px oklch(var(--military-dark-olive) / 0.07);
+  box-shadow: 0 6px 8px -1px rgba(0,0,0,0.1), 0 3px 5px -1px rgba(0,0,0,0.07);
 }
 .military-green-theme .button-primary:focus-visible {
   outline: 2px solid var(--ring);
@@ -236,11 +215,11 @@
   width: 100%;
   padding: 0.75rem 1rem;
   font-size: 1rem; /* 16px for inputs */
-  color: var(--military-theme-text-primary);
-  background-color: var(--military-theme-input-bg);
-  border: 1px solid var(--military-theme-input-border);
+  color: var(--foreground);
+  background-color: var(--input);
+  border: 1px solid var(--border);
   border-radius: 0.5rem; /* lg radius */
-  box-shadow: 0 2px 4px oklch(var(--military-dark-olive) / 0.08);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .military-green-theme input[type="text"]:focus,
@@ -250,13 +229,13 @@
 .military-green-theme input[type="tel"]:focus,
 .military-green-theme textarea:focus,
 .military-green-theme select:focus {
-  border-color: var(--military-theme-primary-hover);
-  box-shadow: 0 0 0 3px oklch(var(--military-theme-primary-hover) / 0.4), 0 2px 4px oklch(var(--military-dark-olive) / 0.08);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
   outline: none;
 }
 .military-green-theme input::placeholder,
 .military-green-theme textarea::placeholder {
-  color: var(--military-theme-text-secondary);
+  color: var(--muted-foreground);
   opacity: 0.8;
 }
 
