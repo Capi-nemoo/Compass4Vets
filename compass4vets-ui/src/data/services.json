@@ -91,5 +91,371 @@
     "eligibility": "Low-income veterans with qualifying legal issues.",
     "keywords": ["lawyer", "attorney", "pro bono", "VA benefits appeal", "eviction"],
     "operatingHours": "Intake line open Mon, Wed, Fri, 10:00 AM - 2:00 PM"
+  },
+  {
+    "id": "health-mindful-warrior",
+    "name": "Mindful Warrior Counseling",
+    "category": "Healthcare",
+    "shortDescription": "Confidential mental health counseling and peer support groups for veterans.",
+    "description": "Mindful Warrior offers therapy sessions, crisis counseling, and weekly peer-led groups focused on PTSD, depression, and anxiety management.",
+    "contactInfo": {
+      "phone": "555-0404",
+      "website": "https://demo.example.com/mindful-warrior"
+    },
+    "address": {
+      "city": "Centerville",
+      "state": "CO"
+    },
+    "operatingHours": "Mon-Sat, 9:00 AM - 8:00 PM",
+    "keywords": ["counseling", "therapy", "support group"]
+  },
+  {
+    "id": "finance-grants-aid",
+    "name": "Veteran Grants Assistance",
+    "category": "Financial",
+    "shortDescription": "Help applying for small grants and financial relief programs.",
+    "description": "Veteran Grants Assistance guides veterans through the paperwork needed for emergency grants, utility help, and other short-term financial aid.",
+    "contactInfo": {
+      "email": "info@grantsaid.org",
+      "website": "https://demo.example.com/grants-aid"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "keywords": ["grants", "financial aid", "emergency"]
+  },
+  {
+    "id": "community-vet-sports",
+    "name": "Veteran Adaptive Sports Club",
+    "category": "Social & Community",
+    "shortDescription": "Weekly adaptive sports and recreation events for wounded veterans.",
+    "description": "The club organizes local leagues and outings for veterans with disabilities, promoting physical health and camaraderie.",
+    "contactInfo": {
+      "phone": "555-0505"
+    },
+    "address": {
+      "city": "Lakeview",
+      "state": "FL"
+    },
+    "keywords": ["sports", "recreation", "community"]
+  },
+  {
+    "id": "education-scholarship-fund",
+    "name": "Heroes Scholarship Fund",
+    "category": "Education",
+    "shortDescription": "Tuition assistance for veterans pursuing undergraduate degrees.",
+    "description": "Heroes Scholarship Fund awards annual scholarships to veterans enrolled in accredited colleges and universities.",
+    "contactInfo": {
+      "website": "https://demo.example.com/heroes-scholarship",
+      "email": "apply@heroes-scholarship.org"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "keywords": ["scholarship", "tuition", "college"]
+  },
+  {
+    "id": "employment-career-fair",
+    "name": "National Veteran Career Fair",
+    "category": "Employment",
+    "shortDescription": "Annual job fair connecting veterans with major employers.",
+    "description": "The National Veteran Career Fair features workshops, resume reviews, and on-site interviews with companies committed to hiring veterans.",
+    "contactInfo": {
+      "website": "https://demo.example.com/vet-career-fair"
+    },
+    "address": {
+      "city": "Washington",
+      "state": "DC"
+    },
+    "keywords": ["job fair", "employment", "workshop"]
+  },
+  {
+    "id": "housing-rural-assist",
+    "name": "Rural Housing Outreach",
+    "category": "Housing",
+    "shortDescription": "Mobile team helping rural veterans access safe housing and VA loans.",
+    "description": "Rural Housing Outreach travels to underserved counties providing housing counseling and assistance with VA loan applications.",
+    "contactInfo": {
+      "phone": "555-0606"
+    },
+    "address": {
+      "details": "Service vans visit multiple states"
+    },
+    "keywords": ["rural", "VA loan", "housing counseling"]
+  },
+  {
+    "id": "legal-benefits-hotline",
+    "name": "Benefits Appeal Hotline",
+    "category": "Legal",
+    "shortDescription": "Phone line staffed by attorneys for VA benefits appeals.",
+    "description": "This hotline answers questions about denied claims and can connect callers with accredited representatives for formal appeals.",
+    "contactInfo": {
+      "phone": "555-0707"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "operatingHours": "Mon-Fri, 9:00 AM - 4:00 PM",
+    "keywords": ["benefits", "appeal", "claims"]
+  },
+  {
+    "id": "finance-credit-counsel",
+    "name": "Credit Counseling for Veterans",
+    "category": "Financial",
+    "shortDescription": "Free credit checks and budgeting workshops.",
+    "description": "Certified counselors help veterans repair credit and plan budgets to achieve long-term financial stability.",
+    "contactInfo": {
+      "email": "support@vetcredit.org"
+    },
+    "address": {
+      "city": "Columbus",
+      "state": "OH"
+    },
+    "keywords": ["credit", "budget", "finance"]
+  },
+  {
+    "id": "community-family-retreat",
+    "name": "Family Reintegration Retreats",
+    "category": "Social & Community",
+    "shortDescription": "Weekend retreats focused on reconnecting veterans with their families.",
+    "description": "Counselors and peer mentors facilitate activities that help families adjust after deployments and long separations.",
+    "contactInfo": {
+      "website": "https://demo.example.com/family-retreat"
+    },
+    "address": {
+      "state": "UT"
+    },
+    "keywords": ["family", "retreat", "reintegration"]
+  },
+  {
+    "id": "education-skillbridge",
+    "name": "SkillBridge Prep Center",
+    "category": "Education",
+    "shortDescription": "Workshops preparing service members for DoD SkillBridge internships.",
+    "description": "This center offers resume help and industry briefings so veterans can make the most of SkillBridge opportunities before separation.",
+    "contactInfo": {
+      "phone": "555-0808"
+    },
+    "address": {
+      "city": "Fayetteville",
+      "state": "NC"
+    },
+    "keywords": ["skillbridge", "transition", "internship"]
+  },
+  {
+    "id": "employment-remote-jobs",
+    "name": "Remote Veterans Work Hub",
+    "category": "Employment",
+    "shortDescription": "Database of vetted remote job openings for veterans.",
+    "description": "The Work Hub curates remote-friendly employers and provides interview coaching tailored for virtual roles.",
+    "contactInfo": {
+      "email": "jobs@remotevets.org"
+    },
+    "address": {
+      "details": "Online Only"
+    },
+    "keywords": ["remote", "telework", "virtual"]
+  },
+  {
+    "id": "housing-transitional-center",
+    "name": "Transitional Housing Center",
+    "category": "Housing",
+    "shortDescription": "Short-term housing with counseling and job training on-site.",
+    "description": "This center offers dorm-style rooms for up to six months while veterans secure employment and permanent housing.",
+    "contactInfo": {
+      "phone": "555-0909"
+    },
+    "address": {
+      "city": "Chicago",
+      "state": "IL"
+    },
+    "keywords": ["transitional", "shelter", "training"]
+  },
+  {
+    "id": "legal-discharge-upgrade",
+    "name": "Discharge Upgrade Project",
+    "category": "Legal",
+    "shortDescription": "Assistance filing for discharge upgrades and record corrections.",
+    "description": "Volunteer attorneys review service records and help prepare applications to military review boards.",
+    "contactInfo": {
+      "website": "https://demo.example.com/discharge-upgrade"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "keywords": ["discharge", "upgrade", "records"]
+  },
+  {
+    "id": "health-telemedicine",
+    "name": "Vet Telemedicine Portal",
+    "category": "Healthcare",
+    "shortDescription": "Video appointments with VA doctors from home.",
+    "description": "The portal connects veterans to licensed practitioners for routine consultations and prescription renewals without travel.",
+    "contactInfo": {
+      "website": "https://demo.example.com/telemedicine"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "keywords": ["telehealth", "virtual", "doctor"]
+  },
+  {
+    "id": "education-certification-grants",
+    "name": "Certification Grant Program",
+    "category": "Education",
+    "shortDescription": "Covers testing fees for professional certifications.",
+    "description": "Veterans can apply for reimbursement of exam costs for IT, project management, and other career certifications.",
+    "contactInfo": {
+      "email": "grants@certvets.org"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "keywords": ["certification", "exam", "reimbursement"]
+  },
+  {
+    "id": "employment-startup-lab",
+    "name": "Veteran Startup Lab",
+    "category": "Employment",
+    "shortDescription": "Incubator program for veteran-owned small businesses.",
+    "description": "Provides mentorship, workspace, and seed funding competitions to help veterans launch entrepreneurial ventures.",
+    "contactInfo": {
+      "website": "https://demo.example.com/startup-lab"
+    },
+    "address": {
+      "city": "San Diego",
+      "state": "CA"
+    },
+    "keywords": ["entrepreneur", "business", "startup"]
+  },
+  {
+    "id": "housing-home-mods",
+    "name": "Accessible Home Modifications",
+    "category": "Housing",
+    "shortDescription": "Grants to adapt homes for mobility-impaired veterans.",
+    "description": "Certified contractors install ramps, widen doorways, and improve safety so veterans can live independently.",
+    "contactInfo": {
+      "phone": "555-1010"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "keywords": ["accessibility", "home", "modification"]
+  },
+  {
+    "id": "community-vet-art",
+    "name": "Veterans Art Collective",
+    "category": "Social & Community",
+    "shortDescription": "Creative workshops and gallery shows featuring veteran artists.",
+    "description": "Weekly classes in painting, music, and writing culminate in community exhibitions that celebrate veterans' voices.",
+    "contactInfo": {
+      "email": "info@vetartcollective.org"
+    },
+    "address": {
+      "city": "Portland",
+      "state": "OR"
+    },
+    "keywords": ["art", "workshop", "community"]
+  },
+  {
+    "id": "finance-loan-counsel",
+    "name": "VA Loan Counseling Network",
+    "category": "Financial",
+    "shortDescription": "Guidance on VA home loans and refinancing options.",
+    "description": "Certified counselors explain eligibility and help veterans compare lenders for the best rates.",
+    "contactInfo": {
+      "phone": "555-1111"
+    },
+    "address": {
+      "city": "Phoenix",
+      "state": "AZ"
+    },
+    "keywords": ["VA loan", "mortgage", "refinance"]
+  },
+  {
+    "id": "community-volunteer-corps",
+    "name": "Veteran Volunteer Corps",
+    "category": "Social & Community",
+    "shortDescription": "Connects veterans with local volunteer opportunities.",
+    "description": "From disaster relief to mentoring youth, the corps organizes service projects that keep veterans engaged in their communities.",
+    "contactInfo": {
+      "website": "https://demo.example.com/volunteer-corps"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "keywords": ["volunteer", "community", "service"]
+  },
+  {
+    "id": "education-online-university",
+    "name": "Veterans Online University",
+    "category": "Education",
+    "shortDescription": "Self-paced courses in business, health, and technology.",
+    "description": "This accredited online program offers discounts for veterans and accepts GI Bill benefits.",
+    "contactInfo": {
+      "website": "https://demo.example.com/online-university"
+    },
+    "address": {
+      "details": "Online Only"
+    },
+    "keywords": ["online", "degree", "gi bill"]
+  },
+  {
+    "id": "employment-apprenticeship",
+    "name": "Trades Apprenticeship Program",
+    "category": "Employment",
+    "shortDescription": "Paid apprenticeships in plumbing, electrical, and carpentry trades.",
+    "description": "Partner unions sponsor apprenticeships exclusively for veterans, combining classroom learning with paid on-the-job training.",
+    "contactInfo": {
+      "phone": "555-1212"
+    },
+    "address": {
+      "city": "Detroit",
+      "state": "MI"
+    },
+    "keywords": ["apprenticeship", "trades", "training"]
+  },
+  {
+    "id": "legal-tax-clinic",
+    "name": "Veterans Tax Law Clinic",
+    "category": "Legal",
+    "shortDescription": "Assistance with IRS disputes and tax return preparation.",
+    "description": "Law students and supervising attorneys help veterans resolve tax issues and claim eligible deductions.",
+    "contactInfo": {
+      "email": "clinic@vettaxlaw.org"
+    },
+    "address": {
+      "city": "Boston",
+      "state": "MA"
+    },
+    "keywords": ["tax", "IRS", "clinic"]
+  },
+  {
+    "id": "housing-energy-assist",
+    "name": "Energy Assistance Program",
+    "category": "Housing",
+    "shortDescription": "Utility bill help for low-income veteran households.",
+    "description": "Seasonal grants help cover heating and cooling costs to ensure veterans can stay in their homes.",
+    "contactInfo": {
+      "phone": "555-1313"
+    },
+    "address": {
+      "state": "NV"
+    },
+    "keywords": ["utility", "bill", "energy"]
+  },
+  {
+    "id": "community-peer-network",
+    "name": "Peer Mentor Network",
+    "category": "Social & Community",
+    "shortDescription": "Matches new veterans with local peer mentors for guidance.",
+    "description": "Experienced veterans volunteer as mentors to help newcomers navigate civilian life, benefits, and community resources.",
+    "contactInfo": {
+      "email": "mentors@peernetwork.org"
+    },
+    "address": {
+      "details": "Nationwide"
+    },
+    "keywords": ["mentor", "peer", "support"]
   }
 ]
